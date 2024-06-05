@@ -1,0 +1,11 @@
+﻿  goto的练习.c
+D:\c\5.30\c-language\goto的练习\goto的练习\goto的练习.c(9,2): warning C4013: “system”未定义；假设外部返回 int
+D:\c\5.30\c-language\goto的练习\goto的练习\goto的练习.c(13,10): warning C4473: “scanf_s”: 没有为格式字符串传递足够的参数
+  D:\c\5.30\c-language\goto的练习\goto的练习\goto的练习.c(13,10):
+  占位符和其参数预计 2 可变参数，但提供的却是 1 参数
+  D:\c\5.30\c-language\goto的练习\goto的练习\goto的练习.c(13,10):
+  缺失的可变参数 2 为格式字符串“%s”所需
+  D:\c\5.30\c-language\goto的练习\goto的练习\goto的练习.c(13,10):
+  此参数用作缓冲区大小
+  
+  goto的练习.vcxproj -> D:\c\5.30\c-language\goto的练习\x64\Debug\goto的练习.exe
