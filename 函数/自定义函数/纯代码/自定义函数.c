@@ -22,6 +22,38 @@
 //}
 
 
+//
+//int avg(int n) {                         //定义avg()函数
+//    int sum = 0;                         //变量初始化
+//    int data;
+//    int i = n;
+//    printf("请输入%d个数据：\n", n);
+//    while (i > 0)                          //求出所有数字的和
+//    {
+//        scanf("%d", &data);
+//        sum += data;
+//        i--;
+//    }
+//    int avg = sum / n;                    //求出平均值
+//    return avg;                           //返回平均值
+//}
+//int main() {
+//    int n;                               //n表示数字的数量
+//    printf("请输入数据的个数：");
+//    scanf("%d", &n);
+//    int a = 0;
+//    a = avg(n);                           //调用avg()函数
+//    printf("这%d个数据的平均值是：%d\n", n, a);
+//    return 0;
+//}
+//
+//
+//
+
+
+
+
+
 
 int avg(int n) {                         //定义avg()函数
     int sum = 0;                         //变量初始化
