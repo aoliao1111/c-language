@@ -287,48 +287,78 @@
 //}
 
 
+//
+//
+//
+//#include <stdio.h>
+//int subscript;
+//
+//void InitArray(int a[], int len)
+//{
+//	int i;
+//	for (i = 0; i < len; i++)
+//	{
+//		printf("请输入第%d个数据：\n", i + 1);
+//		scanf("%d", &a[i]);
+//	}
+//}
+//
+//int PrintArray(int a[], int len)
+//{
+//	int i;
+//	int max;
+//	max = a[0];
+//	for (i = 0; i < len; i++)
+//	{
+//		if (max < a[i])
+//		{
+//			max = a[i];
+//			subscript = i;
+//		}
+//	}
+//	return max;
+//}
+//
+//int main()
+//{
+//	int a[10];
+//	int max;
+//	int len = sizeof(a) / sizeof(a[0]);
+//
+//	InitArray(a, len);
+//	max = PrintArray(a, len);
+//
+//	printf("最大值是%d,最大值的下标是%d\n", max, subscript + 1);
+//
+//	return 0;
+//}
 
 
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int subscript;
-
-void InitArray(int a[], int len)
-{
-	int i;
-	for (i = 0; i < len; i++)
-	{
-		printf("请输入第%d个数据：\n", i + 1);
-		scanf("%d", &a[i]);
-	}
-}
-
-int PrintArray(int a[], int len)
-{
-	int i;
-	int max;
-	max = a[0];
-	for (i = 0; i < len; i++)
-	{
-		if (max < a[i])
-		{
-			max = a[i];
-			subscript = i;
-		}
-	}
-	return max;
-}
+int fib(int i);
 
 int main()
 {
-	int a[10];
-	int max;
-	int len = sizeof(a) / sizeof(a[0]);
-
-	InitArray(a, len);
-	max = PrintArray(a, len);
-
-	printf("最大值是%d,最大值的下标是%d\n", max, subscript + 1);
-
+	int a;
+	printf("请输入斐波那契数列的最后一项的项数：");
+	scanf("%d", &a);
+	for (int i = 1; i <= a; i++)
+	{
+		printf("fib(%d)=%d\n", i, fib(i));
+	}
 	return 0;
+}
+
+int fib(int i)
+{
+	if (i == 1 || i == 2)
+	{
+		return 1;
+	}
+	else if (i > 2)
+	{
+		return fib(i - 1) + fib(i - 2);
+	}
 }
