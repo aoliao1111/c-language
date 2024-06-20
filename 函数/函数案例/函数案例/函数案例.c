@@ -334,31 +334,61 @@
 //}
 
 
+//
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//int fib(int i);
+//
+//int main()
+//{
+//	int a;
+//	printf("请输入斐波那契数列的最后一项的项数：");
+//	scanf("%d", &a);
+//	for (int i = 1; i <= a; i++)
+//	{
+//		printf("fib(%d)=%d\n", i, fib(i));
+//	}
+//	return 0;
+//}
+//
+//int fib(int i)
+//{
+//	if (i == 1 || i == 2)
+//	{
+//		return 1;
+//	}
+//	else if (i > 2)
+//	{
+//		return fib(i - 1) + fib(i - 2);
+//	}
+//}
+//
 
-#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
-int fib(int i);
+
+int PrintResult(int data1, int data2)
+{
+	int result;
+	result = data1 + data2;
+
+	printf("形参data1=%d,地址为%p\n", data1, &data1);
+	printf("形参data2=%d,地址为%p\n", data2, &data2);
+
+	return result;
+}
 
 int main()
 {
-	int a;
-	printf("请输入斐波那契数列的最后一项的项数：");
-	scanf("%d", &a);
-	for (int i = 1; i <= a; i++)
-	{
-		printf("fib(%d)=%d\n", i, fib(i));
-	}
-	return 0;
-}
+	int data1 = 10;
+	int data2 = 20;
+	int result;
 
-int fib(int i)
-{
-	if (i == 1 || i == 2)
-	{
-		return 1;
-	}
-	else if (i > 2)
-	{
-		return fib(i - 1) + fib(i - 2);
-	}
+	result = PrintResult(data1, data2);
+
+	printf("实参data1=%d,地址为%p\n", data1, &data1);
+	printf("实参data2=%d,地址为%p\n", data2, &data2);
+	printf("result = %d\n", result);
+
+	return 0;
 }
