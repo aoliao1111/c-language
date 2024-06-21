@@ -1,4 +1,4 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 ////#define _CRT_SECURE_NO_WARNINGS
 ////#include <stdio.h>
 ////int avg(int n) {                         //定义avg()函数
@@ -364,31 +364,115 @@
 //}
 //
 
+//
+//#include <stdio.h>
+//
+//int PrintResult(int data1, int data2)
+//{
+//	int result;
+//	result = data1 + data2;
+//
+//	printf("形参data1=%d,地址为%p\n", data1, &data1);
+//	printf("形参data2=%d,地址为%p\n", data2, &data2);
+//
+//	return result;
+//}
+//
+//int main()
+//{
+//	int data1 = 10;
+//	int data2 = 20;
+//	int result;
+//
+//	result = PrintResult(data1, data2);
+//
+//	printf("实参data1=%d,地址为%p\n", data1, &data1);
+//	printf("实参data2=%d,地址为%p\n", data2, &data2);
+//	printf("result = %d\n", result);
+//
+//	return 0;
+//}
 
-#include <stdio.h>
 
-int PrintResult(int data1, int data2)
+
+
+
+#include<stdio.h>
+
+int temperatureTrend(int* temperatureA, int temperatureASize, int* temperatureB, int temperatureBSize)
 {
-	int result;
-	result = data1 + data2;
+    int y = 0;
+    int r = 0;
+    int arr1[] = { 0 };
+    int arr2[] = { 0 };
+    int arr3[] = { 0 };
+    int arr4[] = { 0 };
+    for (y = 0; y < temperatureASize; y++)
+    {
+        if (temperatureA[y] < temperatureA[y + 1])
+        {
+            arr1[y] = 0;
+        }
+        else if (temperatureA[y] == temperatureA[y + 1])
+        {
+            arr1[y] = 1;
+        }
+        else if (temperatureA[y] > temperatureA[y + 1])
+        {
+            arr1[y] = 2;
+        }
+        else if (temperatureB[y] < temperatureB[y + 1])
+        {
+            arr1[y] = 0;
+        }
+        else if (temperatureB[y] == temperatureB[y + 1])
+        {
+            arr1[y] = 1;
+        }
+        else if (temperatureB[y] > temperatureB[y + 1])
+        {
+            arr1[y] = 2;
+        }
+    }
+    printf("%s", arr4);
 
-	printf("形参data1=%d,地址为%p\n", data1, &data1);
-	printf("形参data2=%d,地址为%p\n", data2, &data2);
 
-	return result;
+
+    for (r = 0; r < temperatureASize; r++)
+    {
+        if (arr1[r] == arr2[r])
+        {
+            arr3[r] + 1;
+            arr4[r] = arr3[r];
+        }
+        else
+        {
+            memset(arr3, 0, sizeof arr3);
+        }
+    }
+
+
+
 }
+
+
 
 int main()
 {
-	int data1 = 10;
-	int data2 = 20;
-	int result;
+    int temperatureA[] = { 0 };
+    int temperatureB[] = { 0 };
+    for (int i = 0; i < 1000; i++)
+    {
+        scanf("%s %s", &  temperatureA[i], & temperatureB[i]);
+        
+    }
 
-	result = PrintResult(data1, data2);
+    int temperatureASize = sizeof(temperatureA) / sizeof(temperatureA[0]);
+    int temperatureBSize = sizeof(temperatureB) / sizeof(temperatureB[0]);
+    temperatureTrend(&temperatureA,  temperatureASize, &temperatureB,  temperatureBSize);
 
-	printf("实参data1=%d,地址为%p\n", data1, &data1);
-	printf("实参data2=%d,地址为%p\n", data2, &data2);
-	printf("result = %d\n", result);
 
-	return 0;
+
+
+    return 0;
 }
