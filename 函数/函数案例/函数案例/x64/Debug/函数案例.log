@@ -1,12 +1,2 @@
 ﻿  函数案例.c
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(437,12): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(445,21): warning C4552: ”+“: 未使用表达式结果
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(450,13): warning C4013: “memset”未定义；假设外部返回 int
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(466,15): warning C4477: “scanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(466,15): warning C4477: “scanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 2 拥有了类型“int *”
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(472,22): warning C4047: “函数”:“int *”与“int (*)[1]”的间接级别不同
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(472,22): warning C4024: “temperatureTrend”: 形参和实参 1 的类型不同
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(472,56): warning C4047: “函数”:“int *”与“int (*)[1]”的间接级别不同
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(472,56): warning C4024: “temperatureTrend”: 形参和实参 3 的类型不同
-D:\c\5.30\c-language\函数\函数案例\函数案例\函数案例.c(456): warning C4716: “temperatureTrend”: 必须返回一个值
   函数案例.vcxproj -> D:\c\5.30\c-language\函数\函数案例\x64\Debug\函数案例.exe

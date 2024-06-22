@@ -394,85 +394,116 @@
 //}
 
 
+//
+//
+//
+//#include<stdio.h>
+//
+//int temperatureTrend(int* temperatureA, int temperatureASize, int* temperatureB, int temperatureBSize)
+//{
+//    int y = 0;
+//    int r = 0;
+//    int arr1[] = { 0 };
+//    int arr2[] = { 0 };
+//    int arr3[] = { 0 };
+//    int arr4[] = { 0 };
+//    for (y = 0; y < temperatureASize; y++)
+//    {
+//        if (temperatureA[y] < temperatureA[y + 1])
+//        {
+//            arr1[y] = 0;
+//        }
+//        else if (temperatureA[y] == temperatureA[y + 1])
+//        {
+//            arr1[y] = 1;
+//        }
+//        else if (temperatureA[y] > temperatureA[y + 1])
+//        {
+//            arr1[y] = 2;
+//        }
+//        else if (temperatureB[y] < temperatureB[y + 1])
+//        {
+//            arr1[y] = 0;
+//        }
+//        else if (temperatureB[y] == temperatureB[y + 1])
+//        {
+//            arr1[y] = 1;
+//        }
+//        else if (temperatureB[y] > temperatureB[y + 1])
+//        {
+//            arr1[y] = 2;
+//        }
+//    }
+//    printf("%s", arr4);
+//
+//
+//
+//    for (r = 0; r < temperatureASize; r++)
+//    {
+//        if (arr1[r] == arr2[r])
+//        {
+//            arr3[r] + 1;
+//            arr4[r] = arr3[r];
+//        }
+//        else
+//        {
+//            memset(arr3, 0, sizeof arr3);
+//        }
+//    }
+//
+//
+//
+//}
+//
+//
+//
+//int main()
+//{
+//    int temperatureA[] = { 0 };
+//    int temperatureB[] = { 0 };
+//    for (int i = 0; i < 1000; i++)
+//    {
+//        scanf("%s %s", &  temperatureA[i], & temperatureB[i]);
+//        
+//    }
+//
+//    int temperatureASize = sizeof(temperatureA) / sizeof(temperatureA[0]);
+//    int temperatureBSize = sizeof(temperatureB) / sizeof(temperatureB[0]);
+//    temperatureTrend(&temperatureA,  temperatureASize, &temperatureB,  temperatureBSize);
+//
+//
+//
+//
+//    return 0;
+//}
+//
+//
+//
 
 
 
-#include<stdio.h>
 
-int temperatureTrend(int* temperatureA, int temperatureASize, int* temperatureB, int temperatureBSize)
-{
-    int y = 0;
-    int r = 0;
-    int arr1[] = { 0 };
-    int arr2[] = { 0 };
-    int arr3[] = { 0 };
-    int arr4[] = { 0 };
-    for (y = 0; y < temperatureASize; y++)
-    {
-        if (temperatureA[y] < temperatureA[y + 1])
-        {
-            arr1[y] = 0;
-        }
-        else if (temperatureA[y] == temperatureA[y + 1])
-        {
-            arr1[y] = 1;
-        }
-        else if (temperatureA[y] > temperatureA[y + 1])
-        {
-            arr1[y] = 2;
-        }
-        else if (temperatureB[y] < temperatureB[y + 1])
-        {
-            arr1[y] = 0;
-        }
-        else if (temperatureB[y] == temperatureB[y + 1])
-        {
-            arr1[y] = 1;
-        }
-        else if (temperatureB[y] > temperatureB[y + 1])
-        {
-            arr1[y] = 2;
-        }
-    }
-    printf("%s", arr4);
+#include <stdio.h>
+void swapCharAndInt(char* charArr, int* intArr, int index1, int index2) {
+    char tempChar = charArr[index1];
+    int tempInt = intArr[index2];
 
-
-
-    for (r = 0; r < temperatureASize; r++)
-    {
-        if (arr1[r] == arr2[r])
-        {
-            arr3[r] + 1;
-            arr4[r] = arr3[r];
-        }
-        else
-        {
-            memset(arr3, 0, sizeof arr3);
-        }
-    }
-
-
-
+    charArr[index1] = (char)tempInt;
+    intArr[index2] = (int)tempChar;
 }
 
+int main() {
+    char charArr[] = { 'a', 'b', 'c' };
+    int intArr[] = { 1,2, 3 };
 
+    int index1 = 0;
+    int index2 = 1;
 
-int main()
-{
-    int temperatureA[] = { 0 };
-    int temperatureB[] = { 0 };
-    for (int i = 0; i < 1000; i++)
-    {
-        scanf("%s %s", &  temperatureA[i], & temperatureB[i]);
-        
-    }
+    swapCharAndInt(charArr, intArr, index1, index2);
 
-    int temperatureASize = sizeof(temperatureA) / sizeof(temperatureA[0]);
-    int temperatureBSize = sizeof(temperatureB) / sizeof(temperatureB[0]);
-    temperatureTrend(&temperatureA,  temperatureASize, &temperatureB,  temperatureBSize);
-
-
-
+    printf("After swapping:\n");
+    printf("charArr: %c %c %c\n", charArr[0], charArr[1], charArr[2]);
+    printf("intArr: %d %d %d\n", intArr[0], intArr[1], intArr[2]);
 
     return 0;
 }
