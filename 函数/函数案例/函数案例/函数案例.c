@@ -481,29 +481,77 @@
 //
 
 
+//
+//
+//#include <stdio.h>
+//void swapCharAndInt(char* charArr, int* intArr, int index1, int index2) {
+//    char tempChar = charArr[index1];
+//    int tempInt = intArr[index2];
+//
+//    charArr[index1] = (char)tempInt;
+//    intArr[index2] = (int)tempChar;
+//}
+//
+//int main() {
+//    char charArr[] = { 'a', 'b', 'c' };
+//    int intArr[] = { 1,2, 3 };
+//
+//    int index1 = 0;
+//    int index2 = 1;
+//
+//    swapCharAndInt(charArr, intArr, index1, index2);
+//
+//    printf("After swapping:\n");
+//    printf("charArr: %c %c %c\n", charArr[0], charArr[1], charArr[2]);
+//    printf("intArr: %d %d %d\n", intArr[0], intArr[1], intArr[2]);
+//
+//    return 0;
+//}
 
 
-#include <stdio.h>
-void swapCharAndInt(char* charArr, int* intArr, int index1, int index2) {
-    char tempChar = charArr[index1];
-    int tempInt = intArr[index2];
 
-    charArr[index1] = (char)tempInt;
-    intArr[index2] = (int)tempChar;
-}
 
-int main() {
-    char charArr[] = { 'a', 'b', 'c' };
-    int intArr[] = { 1,2, 3 };
+//数字转换为拼音
 
-    int index1 = 0;
-    int index2 = 1;
-
-    swapCharAndInt(charArr, intArr, index1, index2);
-
-    printf("After swapping:\n");
-    printf("charArr: %c %c %c\n", charArr[0], charArr[1], charArr[2]);
-    printf("intArr: %d %d %d\n", intArr[0], intArr[1], intArr[2]);
-
-    return 0;
+#include<stdio.h>
+int main()
+{
+	int number = 0;
+	int mask = 1;
+	int t = 0;
+	int d = 0; // 代表数字的每一位 
+	scanf("%d", &number);
+	// 首先我们要判断这个数字的位数
+	if (number < 0) {
+		printf("fu ");
+		number = -number;
+	}
+	t = number;
+	while (number > 9) {
+		mask = mask * 10;
+		number /= 10;
+	}
+	number = t;
+	do {
+		//取出数字的每一位 
+		d = number / mask;
+		switch (d) {
+		case 9: printf("jiu"); break;
+		case 8: printf("ba"); break;
+		case 7: printf("qi"); break;
+		case 6: printf("liu"); break;
+		case 5: printf("wu"); break;
+		case 4: printf("si"); break;
+		case 3: printf("san"); break;
+		case 2: printf("er"); break;
+		case 1: printf("yi"); break;
+		case 0: printf("ling"); break;
+		}
+		if (mask > 9) {
+			printf(" ");
+		}
+		number = number % mask;
+		mask /= 10;
+	} while (mask > 0);
+	return 0;
 }
