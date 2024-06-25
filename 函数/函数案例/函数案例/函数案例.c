@@ -512,46 +512,135 @@
 
 
 //数字转换为拼音
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int number = 0;
+//	int mask = 1;
+//	int t = 0;
+//	int d = 0; // 代表数字的每一位 
+//	scanf("%d", &number);
+//	// 首先我们要判断这个数字的位数
+//	if (number < 0) {
+//		printf("fu ");
+//		number = -number;
+//	}
+//	t = number;
+//	while (number > 9) {
+//		mask = mask * 10;
+//		number /= 10;
+//	}
+//	number = t;
+//	do {
+//		//取出数字的每一位 
+//		d = number / mask;
+//		switch (d) {
+//		case 9: printf("jiu"); break;
+//		case 8: printf("ba"); break;
+//		case 7: printf("qi"); break;
+//		case 6: printf("liu"); break;
+//		case 5: printf("wu"); break;
+//		case 4: printf("si"); break;
+//		case 3: printf("san"); break;
+//		case 2: printf("er"); break;
+//		case 1: printf("yi"); break;
+//		case 0: printf("ling"); break;
+//		}
+//		if (mask > 9) {
+//			printf(" ");
+//		}
+//		number = number % mask;
+//		mask /= 10;
+//	} while (mask > 0);
+//	return 0;
+//}
 
+
+
+
+
+
+
+
+
+
+//要引用的库文件 
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 int main()
 {
+	srand(time(0));
+	//产生随机数的种子确保每一次产生的随机数不同 
 	int number = 0;
-	int mask = 1;
-	int t = 0;
-	int d = 0; // 代表数字的每一位 
+	int ret = 0;
+	int cet = 0;
 	scanf("%d", &number);
-	// 首先我们要判断这个数字的位数
-	if (number < 0) {
-		printf("fu ");
-		number = -number;
+	int a[number + 1] = { 0 }; //定义初始化 
+	int b[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
+	int c[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
+	/*
+	printf("%d\n",sizeof(b) / sizeof(b[0]));
+	printf("%d\n",sizeof(c) / sizeof(c[0]));
+	printf("size = %d\n",sizeof(a) / sizeof(a[0]));
+	*/
+
+	//参数随机数放入数组 
+	printf("\n原始数组:\n");
+	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
+		a[i] = rand() % 100;
+		printf("%d ", a[i]);
 	}
-	t = number;
-	while (number > 9) {
-		mask = mask * 10;
-		number /= 10;
+	printf("\n");
+	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
+		if (i % 2 == 0) {
+			b[ret++] = a[i]; //存放偶数 
+		}
+		else {
+			c[cet++] = a[i]; //存放奇数 
+		}
 	}
-	number = t;
-	do {
-		//取出数字的每一位 
-		d = number / mask;
-		switch (d) {
-		case 9: printf("jiu"); break;
-		case 8: printf("ba"); break;
-		case 7: printf("qi"); break;
-		case 6: printf("liu"); break;
-		case 5: printf("wu"); break;
-		case 4: printf("si"); break;
-		case 3: printf("san"); break;
-		case 2: printf("er"); break;
-		case 1: printf("yi"); break;
-		case 0: printf("ling"); break;
+	//printf("ret = %d cet = %d\n",ret,cet);
+	printf("\n");
+	printf("\n奇数数组:\n");
+	for (int i = 0; i < cet; i++) {
+		printf("%d ", c[i]);
+	}
+
+	//排序
+	//奇数数组排序
+	int temp = 0;
+	for (int i = 0; i < cet - 1; i++) {
+		for (int j = i + 1; j < cet; j++) {
+			if (c[i] > c[j]) {
+				temp = c[i];
+				c[i] = c[j];
+				c[j] = temp;
+			}
 		}
-		if (mask > 9) {
-			printf(" ");
+	}
+	printf("\n");
+	printf("排序后:\n");
+	for (int i = 0; i < cet; i++) {
+		printf("%d ", c[i]);
+	}
+	printf("\n\n偶数数组:\n");
+	for (int i = 0; i < ret; i++) {
+		printf("%d ", b[i]);
+	}
+	for (int i = 0; i < ret - 1; i++) {
+		for (int j = 0; j < ret - 1 - i; j++) {
+			if (b[j] > b[j + 1]) {
+				temp = b[j];
+				b[j] = b[j + 1];
+				b[j + 1] = temp;
+			}
 		}
-		number = number % mask;
-		mask /= 10;
-	} while (mask > 0);
+	}
+	printf("\n排序后:\n");
+	for (int i = 0; i < ret; i++) {
+		printf("%d ", b[i]);
+	}
 	return 0;
 }
