@@ -558,6 +558,92 @@
 
 
 
+//
+//
+//
+//
+//
+//
+//
+////要引用的库文件 
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//int main()
+//{
+//	srand(time(0));
+//	//产生随机数的种子确保每一次产生的随机数不同 
+//	int number = 0;
+//	int ret = 0;
+//	int cet = 0;
+//	scanf("%d", &number);
+//	int a[number + 1] = { 0 }; //定义初始化 
+//	int b[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
+//	int c[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
+//	/*
+//	printf("%d\n",sizeof(b) / sizeof(b[0]));
+//	printf("%d\n",sizeof(c) / sizeof(c[0]));
+//	printf("size = %d\n",sizeof(a) / sizeof(a[0]));
+//	*/
+//
+//	//参数随机数放入数组 
+//	printf("\n原始数组:\n");
+//	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
+//		a[i] = rand() % 100;
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
+//		if (i % 2 == 0) {
+//			b[ret++] = a[i]; //存放偶数 
+//		}
+//		else {
+//			c[cet++] = a[i]; //存放奇数 
+//		}
+//	}
+//	//printf("ret = %d cet = %d\n",ret,cet);
+//	printf("\n");
+//	printf("\n奇数数组:\n");
+//	for (int i = 0; i < cet; i++) {
+//		printf("%d ", c[i]);
+//	}
+//
+//	//排序
+//	//奇数数组排序
+//	int temp = 0;
+//	for (int i = 0; i < cet - 1; i++) {
+//		for (int j = i + 1; j < cet; j++) {
+//			if (c[i] > c[j]) {
+//				temp = c[i];
+//				c[i] = c[j];
+//				c[j] = temp;
+//			}
+//		}
+//	}
+//	printf("\n");
+//	printf("排序后:\n");
+//	for (int i = 0; i < cet; i++) {
+//		printf("%d ", c[i]);
+//	}
+//	printf("\n\n偶数数组:\n");
+//	for (int i = 0; i < ret; i++) {
+//		printf("%d ", b[i]);
+//	}
+//	for (int i = 0; i < ret - 1; i++) {
+//		for (int j = 0; j < ret - 1 - i; j++) {
+//			if (b[j] > b[j + 1]) {
+//				temp = b[j];
+//				b[j] = b[j + 1];
+//				b[j + 1] = temp;
+//			}
+//		}
+//	}
+//	printf("\n排序后:\n");
+//	for (int i = 0; i < ret; i++) {
+//		printf("%d ", b[i]);
+//	}
+//	return 0;
+//}
 
 
 
@@ -565,82 +651,30 @@
 
 
 
-//要引用的库文件 
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
+
+
+
+#include <stdio.h>
+#include <stdlib.h> 
 int main()
 {
-	srand(time(0));
-	//产生随机数的种子确保每一次产生的随机数不同 
-	int number = 0;
-	int ret = 0;
-	int cet = 0;
-	scanf("%d", &number);
-	int a[number + 1] = { 0 }; //定义初始化 
-	int b[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
-	int c[number % 2 == 0 ? number / 2 : number / 2 + 1] = { 0 };
-	/*
-	printf("%d\n",sizeof(b) / sizeof(b[0]));
-	printf("%d\n",sizeof(c) / sizeof(c[0]));
-	printf("size = %d\n",sizeof(a) / sizeof(a[0]));
-	*/
-
-	//参数随机数放入数组 
-	printf("\n原始数组:\n");
-	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
-		a[i] = rand() % 100;
-		printf("%d ", a[i]);
-	}
-	printf("\n");
-	for (int i = 1; i < sizeof(a) / sizeof(a[0]); i++) {
-		if (i % 2 == 0) {
-			b[ret++] = a[i]; //存放偶数 
-		}
-		else {
-			c[cet++] = a[i]; //存放奇数 
-		}
-	}
-	//printf("ret = %d cet = %d\n",ret,cet);
-	printf("\n");
-	printf("\n奇数数组:\n");
-	for (int i = 0; i < cet; i++) {
-		printf("%d ", c[i]);
-	}
-
-	//排序
-	//奇数数组排序
-	int temp = 0;
-	for (int i = 0; i < cet - 1; i++) {
-		for (int j = i + 1; j < cet; j++) {
-			if (c[i] > c[j]) {
-				temp = c[i];
-				c[i] = c[j];
-				c[j] = temp;
-			}
-		}
-	}
-	printf("\n");
-	printf("排序后:\n");
-	for (int i = 0; i < cet; i++) {
-		printf("%d ", c[i]);
-	}
-	printf("\n\n偶数数组:\n");
-	for (int i = 0; i < ret; i++) {
-		printf("%d ", b[i]);
-	}
-	for (int i = 0; i < ret - 1; i++) {
-		for (int j = 0; j < ret - 1 - i; j++) {
-			if (b[j] > b[j + 1]) {
-				temp = b[j];
-				b[j] = b[j + 1];
-				b[j + 1] = temp;
-			}
-		}
-	}
-	printf("\n排序后:\n");
-	for (int i = 0; i < ret; i++) {
-		printf("%d ", b[i]);
-	}
-	return 0;
+    int year;
+    printf("输入年份: ");
+    scanf("%d", &year);
+    if (year % 4 == 0)
+    {
+        if (year % 100 == 0)
+        {
+            if (year % 400 == 0)              // 能被4，100，400整除，则是闰年//
+                printf("%d 是闰年\n", year);
+            else
+                printf("%d 不是闰年\n", year);
+        }
+        else
+            printf("%d 是闰年\n", year);    //能被4整除，不能被100整除，是闰年//
+    }
+    else
+        printf("%d 不是闰年\n", year);
+    system("pause");
+    return 0;
 }
