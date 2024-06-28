@@ -651,30 +651,59 @@
 
 
 
+//
+//
+//
+//#include <stdio.h>
+//#include <stdlib.h> 
+//int main()
+//{
+//    int year;
+//    printf("输入年份: ");
+//    scanf("%d", &year);
+//    if (year % 4 == 0)
+//    {
+//        if (year % 100 == 0)
+//        {
+//            if (year % 400 == 0)              // 能被4，100，400整除，则是闰年//
+//                printf("%d 是闰年\n", year);
+//            else
+//                printf("%d 不是闰年\n", year);
+//        }
+//        else
+//            printf("%d 是闰年\n", year);    //能被4整除，不能被100整除，是闰年//
+//    }
+//    else
+//        printf("%d 不是闰年\n", year);
+//    system("pause");
+//    return 0;
+//}
 
 
 
+
+
+
+
+//调用一次函数，num自身就增加一
 #include <stdio.h>
-#include <stdlib.h> 
+
+void ADD( int * a)
+{
+	(*a)++;
+}
+
+
+
 int main()
 {
-    int year;
-    printf("输入年份: ");
-    scanf("%d", &year);
-    if (year % 4 == 0)
-    {
-        if (year % 100 == 0)
-        {
-            if (year % 400 == 0)              // 能被4，100，400整除，则是闰年//
-                printf("%d 是闰年\n", year);
-            else
-                printf("%d 不是闰年\n", year);
-        }
-        else
-            printf("%d 是闰年\n", year);    //能被4整除，不能被100整除，是闰年//
-    }
-    else
-        printf("%d 不是闰年\n", year);
-    system("pause");
-    return 0;
+	int num = 0;
+	ADD(&num);
+	printf("%d" , num);
+	ADD(&num);
+	printf("%d", num);
+	ADD(&num);
+	printf("%d", num);
+
+	return 0;
 }
