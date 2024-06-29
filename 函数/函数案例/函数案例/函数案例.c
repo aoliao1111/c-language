@@ -684,26 +684,42 @@
 
 
 
+//
+////调用一次函数，num自身就增加一
+//#include <stdio.h>
+//
+//void ADD( int * a)
+//{
+//	(*a)++;
+//}
+//
+//
+//
+//int main()
+//{
+//	int num = 0;
+//	ADD(&num);
+//	printf("%d" , num);
+//	ADD(&num);
+//	printf("%d", num);
+//	ADD(&num);
+//	printf("%d", num);
+//
+//	return 0;
+//}
 
-//调用一次函数，num自身就增加一
-#include <stdio.h>
-
-void ADD( int * a)
-{
-	(*a)++;
-}
 
 
-
-int main()
-{
-	int num = 0;
-	ADD(&num);
-	printf("%d" , num);
-	ADD(&num);
-	printf("%d", num);
-	ADD(&num);
-	printf("%d", num);
-
-	return 0;
+int main() {
+    //外层循环变量,控制行  
+    int i = 0;
+    //内层循环变量,控制列   
+    int j = 0;
+    for (i = 1; i <= 9; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%dx%d=%d\t", j, i, i * j);
+        }
+        //每行输出完后换行   
+        printf("\n");
+    }
 }
