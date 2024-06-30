@@ -709,17 +709,34 @@
 //}
 
 
+//
+//int main() {
+//    //外层循环变量,控制行  
+//    int i = 0;
+//    //内层循环变量,控制列   
+//    int j = 0;
+//    for (i = 1; i <= 9; i++) {
+//        for (j = 1; j <= i; j++) {
+//            printf("%dx%d=%d\t", j, i, i * j);
+//        }
+//        //每行输出完后换行   
+//        printf("\n");
+//    }
+//}
 
-int main() {
-    //外层循环变量,控制行  
-    int i = 0;
-    //内层循环变量,控制列   
-    int j = 0;
-    for (i = 1; i <= 9; i++) {
-        for (j = 1; j <= i; j++) {
-            printf("%dx%d=%d\t", j, i, i * j);
-        }
-        //每行输出完后换行   
-        printf("\n");
-    }
+
+
+
+#include<stdio.h>
+
+int test(int n1) {
+	int sum = n1 + 1;
+	printf("sum = %d", sum);
+	return 0;
 }
+
+void main() {
+	int n2 = 6;
+	test(n2);
+}
+
