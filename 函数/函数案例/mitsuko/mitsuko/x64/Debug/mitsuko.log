@@ -1,0 +1,12 @@
+﻿  mitsuko.c
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(40,23): error C2109: 下标要求数组或指针类型
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(40,11): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+  D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(40,11):
+  占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+  D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(40,11):
+  缺失的可变参数 1 为格式字符串“%c”所需
+  
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(64,12): warning C4047: “函数”:“char”与“char [3][3]”的间接级别不同
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(64,12): warning C4024: “InitBoard”: 形参和实参 1 的类型不同
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(65,10): warning C4047: “函数”:“char”与“char [3][3]”的间接级别不同
+D:\c\5.30\c-language\函数\函数案例\mitsuko\mitsuko\mitsuko.c(65,10): warning C4024: “Display”: 形参和实参 1 的类型不同
