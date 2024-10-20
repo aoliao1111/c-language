@@ -1,0 +1,9 @@
+﻿  game.c
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(6,1): warning C4029: 声明的形参表不同于定义
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(60,21): warning C4028: 形参 1 与声明不同
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(60,47): warning C4028: 形参 2 与声明不同
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(75,21): warning C4013: “NumMine”未定义；假设外部返回 int
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(118,12): warning C4048: “char (*)[11]”和“char [9][9]”数组的下标不同
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(122,13): warning C4048: “char (*)[11]”和“char [9][9]”数组的下标不同
+D:\c\5.30\c-language\函数\函数案例\minesweeper\minesweeper\game.c(123,17): warning C4048: “char (*)[11]”和“char [9][9]”数组的下标不同
+  minesweeper.vcxproj -> D:\c\5.30\c-language\函数\函数案例\minesweeper\x64\Debug\minesweeper.exe
